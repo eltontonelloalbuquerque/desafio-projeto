@@ -1,0 +1,39 @@
+class Cliente:
+    def __init__(self, nome, tipo_cliente):
+        self.nome = nome
+        self.tipo_cliente = tipo_cliente  # 'PJ' ou 'PF'
+        self.formas_de_pagamento = []
+        self.entregas = []
+
+    def adicionar_pagamento(self, pagamento):
+        self.formas_de_pagamento.append(pagamento)
+
+    def adicionar_entrega(self, entrega):
+        self.entregas.append(entrega)
+
+
+class Pagamento:
+    def __init__(self, tipo_pagamento, valor):
+        self.tipo_pagamento = tipo_pagamento  # 'Cartão de Crédito', 'Boleto', etc.
+        self.valor = valor
+
+
+class Entrega:
+    def __init__(self, status, codigo_rastreio):
+        self.status = status  # 'Em Processamento', 'Enviado', 'Entregue', etc.
+        self.codigo_rastreio = codigo_rastreio
+
+
+# Exemplo de uso:
+cliente = Cliente(nome="João Silva", tipo_cliente="PF")
+pagamento1 = Pagamento(tipo_pagamento="Cartão de Crédito", valor=200.00)
+cliente.adicionar_pagamento(pagamento1)
+
+entrega1 = Entrega(status="Enviado", codigo_rastreio="123456789")
+cliente.adicionar_entrega(entrega1)
+
+# Exibição dos dados:
+print(cliente.nome)
+print(cliente.tipo_cliente)
+print([p.tipo_pagamento for p in cliente.formas_de_pagamento])
+print([(e.status, e.codigo_rastreio) for e in cliente.entregas])
