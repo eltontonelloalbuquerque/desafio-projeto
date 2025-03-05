@@ -17,3 +17,9 @@ Cada cliente pode ter várias formas de pagamento, como cartão de crédito, dé
 
 3. Entrega
 Cada pedido realizado pode ser acompanhado por um status, que pode ser: "Em processamento", "Enviado", "Entregue" e outros, além de um código de rastreio para facilitar a localização do pacote.
+
+Considerações Finais:
+
+Flexibilidade no Pagamento: Agora é possível registrar múltiplas formas de pagamento para um único cliente, permitindo que ele utilize diferentes meios de pagamento conforme necessário.
+Acompanhamento de Entregas: A adição do status e código de rastreio para as entregas torna o sistema mais robusto e facilita o acompanhamento das mercadorias.
+Cliente PJ ou PF: A distinção clara entre PJ e PF evita ambiguidade e organiza melhor os dados dos clientes, com informações específicas para cada tipo.
